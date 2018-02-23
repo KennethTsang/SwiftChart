@@ -740,7 +740,7 @@ open class Chart: UIControl {
             let xValues = series.data.map({ (point: ChartPoint) -> Float in
                 return point.x })
             let closest = Chart.findClosestInValues(xValues, forValue: x)
-            if closest.lowestIndex != nil && closest.highestIndex != nil {
+            if closest.lowestIndex != nil {
                 // Consider valid only values on the right
                 index = closest.lowestIndex
             }
